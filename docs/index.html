@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Fuel Price Predictor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Phase 1 - Static Deployment</p>
+        <h1>Global Fuel Price Predictor</h1>
+        <p class="hero-text">
+          A browser-based linear regression demo trained with scikit-learn and deployed with plain
+          HTML, CSS, and JavaScript. The app runs the exported model directly in the browser.
+        </p>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-card">
+          <span class="hero-label">Prediction Target</span>
+          <strong id="target-name">Petrol Price (USD/L)</strong>
+        </div>
+        <div class="hero-card">
+          <span class="hero-label">Model Type</span>
+          <strong>Linear Regression</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <article class="panel input-panel">
+        <div class="panel-header">
+          <p class="panel-kicker">User Input</p>
+          <h2>Adjust scenario features</h2>
+          <p>Choose country and market conditions to estimate the expected petrol price.</p>
+        </div>
+        <form id="prediction-form" class="prediction-form">
+          <div id="numeric-inputs" class="input-grid"></div>
+          <div id="categorical-inputs" class="input-grid"></div>
+          <div class="button-row">
+            <button type="button" id="reset-button" class="ghost-button">Reset to defaults</button>
+          </div>
+        </form>
+      </article>
+
+      <article class="panel result-panel">
+        <div class="panel-header">
+          <p class="panel-kicker">Prediction</p>
+          <h2>Estimated petrol price</h2>
+          <p>The browser reproduces the exported preprocessing and linear model step by step.</p>
+        </div>
+
+        <div class="prediction-card">
+          <span class="prediction-label">Predicted value</span>
+          <strong id="prediction-value">Loading model...</strong>
+          <span id="prediction-subtitle" class="prediction-subtitle"></span>
+        </div>
+
+        <div class="summary-grid">
+          <div class="summary-card">
+            <span>Intercept</span>
+            <strong id="intercept-value">-</strong>
+          </div>
+          <div class="summary-card">
+            <span>Strongest positive driver</span>
+            <strong id="top-positive">-</strong>
+          </div>
+          <div class="summary-card">
+            <span>Strongest negative driver</span>
+            <strong id="top-negative">-</strong>
+          </div>
+        </div>
+
+        <div class="contribution-section">
+          <div class="section-heading">
+            <h3>Feature contribution breakdown</h3>
+            <p>Positive values push the prediction upward, negative values pull it down.</p>
+          </div>
+          <div id="contribution-list" class="contribution-list"></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel">
+        <div class="panel-header compact">
+          <p class="panel-kicker">Model Quality</p>
+          <h2>Evaluation metrics</h2>
+        </div>
+        <div id="metric-cards" class="metric-grid"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header compact">
+          <p class="panel-kicker">Dataset Snapshot</p>
+          <h2>Training context</h2>
+        </div>
+        <div class="dataset-grid">
+          <div class="dataset-card">
+            <span>Rows in dataset</span>
+            <strong id="dataset-rows">-</strong>
+          </div>
+          <div class="dataset-card">
+            <span>Training rows</span>
+            <strong id="train-rows">-</strong>
+          </div>
+          <div class="dataset-card">
+            <span>Test rows</span>
+            <strong id="test-rows">-</strong>
+          </div>
+          <div class="dataset-card">
+            <span>Data file</span>
+            <strong id="data-file">-</strong>
+          </div>
+        </div>
+        <p class="dataset-note">
+          Public reference dataset:
+          <a href="https://www.kaggle.com/datasets/kazishafinalam/global-gas-prices" target="_blank" rel="noreferrer">
+            Kaggle - Global Gas Prices
+          </a>
+        </p>
+      </article>
+    </section>
+
+    <section class="panel footer-panel">
+      <div class="panel-header compact">
+        <p class="panel-kicker">Deployment Note</p>
+        <h2>GitHub Pages ready</h2>
+      </div>
+      <p>
+        This app is static and can be published directly with GitHub Pages after uploading the
+        contents of the <code>phase1/webapp</code> folder to a repository branch or Pages source.
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
