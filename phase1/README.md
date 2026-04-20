@@ -70,7 +70,7 @@ Recommended environment:
 Run:
 
 ```powershell
-c:\Users\maxch\anaconda3\envs\nn_env\python.exe phase1\pipeline.py --no-plots
+c:\Users\Usename\anaconda3\envs\nn_env\python.exe phase1\pipeline.py --no-plots
 ```
 
 This regenerates:
@@ -105,7 +105,7 @@ Suggested deployment flow:
 
 After publishing, add the live URL here:
 
-- `GitHub Pages URL: <insert-your-pages-link-here>`
+- `GitHub Pages URL: https://chappy68.github.io/fuel-price-predictor/`
 
 ## Browser Inference Logic
 
