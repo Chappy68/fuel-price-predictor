@@ -1,0 +1,23 @@
+{
+  "target_column": "petrol_usd_liter",
+  "numeric_features": [
+    "brent_crude_usd",
+    "tax_percentage",
+    "date_year",
+    "date_month",
+    "date_weekofyear"
+  ],
+  "categorical_features": [
+    "country",
+    "region",
+    "income_level",
+    "subsidy_level"
+  ],
+  "best_model_name": "RandomForest_300trees",
+  "best_run_id": "a4ccb31a3be24c36857141f025fa0c4f",
+  "registry_name": "BestFuelRegressor_v1",
+  "registry_version": "2",
+  "dataset_file": "global_fuel_prices_2020_2026.csv",
+  "test_size": 0.2,
+  "random_state": 42
+}
